@@ -1,18 +1,16 @@
 
 body {
-    display: flex;
-    position: relative;
 }
 
 .gameboard {
     height: 100%;
-    width: 100%;
+    width: auto;
     display: flex;
-    /* background-image: url("pics/background/dbz background.png"); */
+    background-image: url("pics/background/dbz background.png");
     background-size: 100%;
     background-repeat: no-repeat;
     z-index: -1;
-    position: absolute;
+    position: relative;
 }
 
 .sprites {
@@ -22,11 +20,25 @@ body {
     justify-content: space-between;
 }
 
-.health-bar {
+#health {
     display: flex;
     position: absolute;
-    justify-content: 
-    zoom: 300%;
+    justify-content: flex-end;
+    align-self: flex-end;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 2px; 
+    width: 20%;
+    height: 22px;
+    margin-left: -20%;
+}
+
+#health::-webkit-progress-bar {
+ background-color: yellow;
+  border-radius: 2px;
+}
+#health::-webkit-progress-value {
+   border-radius: 2px; 
 }
 
 .gotu-standing {
@@ -37,6 +49,7 @@ body {
     top: 227;
     zoom: 300%;
     background: url('pics/sprites/Char_3.png') left center;
+    /* background-color: black; */
     animation: moveSprite 2.25s steps(8) infinite;
     animation-fill-mode: backwards;
 }
@@ -68,6 +81,7 @@ body {
     zoom: 200%;
     position: absolute;
     background: url('pics/auras/GK.png') left center;
+    /* background-color: red; */
     z-index: 1;
     animation: kamehamehaShoot .5s linear 1;
     animation-fill-mode: forwards;
@@ -125,6 +139,7 @@ body {
     zoom: 300%;
     transform: scaleX(-1);
     background: url('pics/sprites/Char_4.png') left center;
+    /* background-color: black; */
     animation: moveSprite 2.25s steps(8) infinite;
     animation-fill-mode: backwards;
 }

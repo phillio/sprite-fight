@@ -54,6 +54,7 @@ document.onkeydown = function(e) {
         kamehameha.style.left = 128 + 'px';
         setTimeout(function() {
             const gotu = document.querySelector('.gotu-standing');
+            //emre mentinoed getBoundingClientRect()
             const gotuDiv = gotu.getBoundingClientRect();
             const kamehameha = document.querySelector('.kamehameha');
             const kamehamehaDiv = kamehameha.getBoundingClientRect();
@@ -61,8 +62,13 @@ document.onkeydown = function(e) {
             const frizuDiv = frizu.getBoundingClientRect();
             if (kamehamehaDiv.bottom > frizuDiv.top && kamehamehaDiv.top < frizuDiv.top) {
                 console.log('HIT - DEDUCT HP')
+                //https://stackoverflow.com/questions/20277052/how-to-make-a-health-bar
+                let healthPoints = document.querySelector("#health")
+                healthPoints.value -= 5;
             } else if (frizuDiv.bottom > kamehamehaDiv.top && frizuDiv.top < kamehamehaDiv.top) {
                 console.log('HIT - DEDUCT HP')
+                let healthPoints = document.querySelector("#health")
+                healthPoints.value -= 5;
             } else {
                 console.log('MISS - LOL GET BETTER')
             }
@@ -74,8 +80,7 @@ document.onkeydown = function(e) {
     }
   }
   
-//   let health = document.getElementById("health")
-//   health.value -= 10;
+  
 
 
 
