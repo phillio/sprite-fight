@@ -1,206 +1,226 @@
 
-    body {
-        background: black;
-      }
-      
-      .gameboard {
-      }
-      
-      .sprites {
-          display: flex;
-          justify-content: space-between;
-      }
-      
-      .gotu {
-          display: flex;
-          flex-direction: column;
-          align-content: left;
-      }
-      
-      .majin-gru {
-          display: flex;
-          flex-direction: column;
-          align-content: center;
-      }
-      
-      .frizu {
-          display: flex;
-          flex-direction: column;
-          align-content: center;
-      }
-      
-      .background {
-          max-height: 100%;
-          max-width: 100%;
-          background-repeat: no-repeat;
-          z-index: -1;
-          position: absolute;
-      }
-      
-      @keyframes moveSprite{
-          from{
-              background-position-x:0px;
-              background-position-y:0px;
-          }
-          to{
-              background-position-x:-512px;
-              background-position-y:0px;
-          }
-      }
-      
-      @keyframes moveSpriteUp{
-          from{
-              background-position-x:0px;
-              background-position-y:-64px;
-            }
-          to{
-              background-position-x:-192px;
-              background-position-y:-64px;
-            }
-      }
-      
-      @keyframes moveSpriteDown{
-          from{
-              background-position-x:0px;
-              background-position-y:-64px;
-            }
-          to{
-              background-position-x:-192px;
-              background-position-y:-64px;
-            }
-      }
-      
-      @keyframes powerUp{
-          from{
-              background-position-x:0px;
-              background-position-y:-384px;
-          }
-          to{
-              background-position-x:-256px;
-              background-position-y:-384px;
-          }
-      }
-      
-      .gotu-standing {
-        width: 72px;
-        height: 64px;
-        zoom: 300%;
-        background: url('pics/sprites/Char_3.png') left center;
-        animation: moveSprite 2.25s steps(8) infinite;
-        animation-fill-mode: backwards;
-      }
-      
-      .gotu-up {
-          width: 72px;
-          height: 64px;
-          zoom: 300%;
-          background: url('pics/sprites/Char_3.png') left center;
-          animation: moveSpriteUp 1s steps(3) infinite;
-          animation-fill-mode: backwards;
-          transform: rotate(-90deg);
-      }
-        
-      .gotu-down {
-          width: 72px;
-          height: 64px;
-          zoom: 300%;
-          background: url('pics/sprites/Char_3.png') left center;
-          animation: moveSpriteDown 1s steps(3) infinite;
-          animation-fill-mode: backwards;
-          transform: rotate(90deg);
-      }
-      
-      
-      .majin-gru-standing {
-          width: 72px;
-          height: 64px;
-          zoom: 300%;
-          background: url('/Users/melaniekalfus/desktop/proj1/char_5.png') left center;
-          animation: moveSprite 2.25s steps(8) infinite;
-          animation-fill-mode: backwards;
-          transform: scaleX(-1);
-      }
-      
-      .majin-gru-up {
-            width: 72px;
-            height: 64px;
-            zoom: 300%;
-            background: url('/Users/melaniekalfus/desktop/proj1/char_5.png') left center;
-            animation: moveSpriteUp 1s steps(3) infinite;
-            animation-fill-mode: backwards;
-            transform: rotate(90deg) scaleX(-1);
-      }
-      
-      .majin-gru-down {
-          width: 72px;
-          height: 64px;
-          zoom: 300%;
-          background: url('pics/sprites/Char_5.png') left center;
-          animation: moveSpriteDown 1s steps(3) infinite;
-          animation-fill-mode: backwards;
-          transform: rotate(-90deg) scaleX(-1);
-      }
-      
-      
-      .frizu-standing {
-          width: 72px;
-          height: 64px;
-          zoom: 300%;
-          transform: scaleX(-1);
-          background: url('pics/sprites/Char_4.png') left center;
-          animation: moveSprite 2.25s steps(8) infinite;
-          animation-fill-mode: backwards;
-      }
-          
-      .frizu-up {
-          width: 72px;
-          height: 64px;
-          zoom: 300%;
-          background: url('pics/sprites/Char_4.png') left center;
-          animation: moveSpriteUp 1s steps(3) infinite;
-          animation-fill-mode: backwards;
-          transform: rotate(90deg) scaleX(-1);
-      }
-              
-      .frizu-down {
-          width: 72px;
-          height: 64px;
-          zoom: 300%;
-          transform: scaleX(-1);
-          background: url('pics/sprites/Char_4.png') left center;
-          animation: moveSpriteDown 1s steps(3) infinite;
-          animation-fill-mode: backwards;
-          transform: rotate(-90deg) scaleX(-1);
-      }
-        
-      .blueAura {
-          display: flex;
-          align-self: flex-start;
-          width: 64px;
-          height: 64px;
-          zoom: 400%;
-          background: url('pics/sprites/Char_3.png') left center;
-          animation: powerUp .6s steps(4) infinite;
-      }
-      
-      .yellowAura {
-          display: flex;
-          align-self: flex-start;
-          width: 64px;
-          height: 64px;
-          zoom: 400%;
-          background: url('pics/sprites/Char_4.png') left center;
-          animation: powerUp .6s steps(4) infinite;
-      }
-      
-      .whiteAura {
-          display: flex;
-          align-self: flex-start;
-          width: 64px;
-          height: 64px;
-          zoom: 400%;
-          background: url('/Users/melaniekalfus/desktop/proj1/char_5.png') left center;
-          animation: powerUp .6s steps(4) infinite;
-      }
+body {
+    display: flex;
+    position: relative;
+}
 
-      
+.gameboard {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    background-image: url("pics/background/dbz background.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: -1;
+    position: absolute;
+}
+
+.sprites {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+.gotu-standing {
+    display: flex;
+    width: 72px;
+    height: 64px;
+    position: relative;
+    top: 227;
+    zoom: 300%;
+    background: url('pics/sprites/Char_3.png') left center;
+    animation: moveSprite 2.25s steps(8) infinite;
+    animation-fill-mode: backwards;
+}
+
+.gotu-up {
+    width: 72px;
+    height: 64px;
+    zoom: 300%;
+    background: url('pics/sprites/Char_3.png') left center;
+    animation: moveSpriteUp .01s steps(1) 1;
+    animation-fill-mode: forwards;
+    transform: rotate(-90deg);
+}
+
+.gotu-down {
+    width: 72px;
+    height: 64px;
+    zoom: 300%;
+    background: url('pics/sprites/Char_3.png') left center;
+    animation: moveSpriteDown .01s steps(1) 1;
+    animation-fill-mode: forwards;
+    transform: rotate(90deg);
+}
+
+.kamehameha {
+    display: flex;
+    width: 72px;
+    height: 64px;
+    zoom: 200%;
+    position: absolute;
+    background: url('pics/auras/GK.png') left center;
+    z-index: 1;
+    animation: kamehamehaShoot .5s linear 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes kamehamehaShoot{
+    0% {
+        left: 10%;
+    }
+    50% {
+        left: 50%;
+    }
+    100% {
+        left: 90%;
+    }
+}
+
+/* 
+.majin-gru-standing {
+    width: 72px;
+    height: 64px;
+    zoom: 300%;
+    background: url('/Users/melaniekalfus/desktop/proj1/char_5.png') left center;
+    animation: moveSprite 2.25s steps(8) infinite;
+    animation-fill-mode: backwards;
+    transform: scaleX(-1);
+}
+
+.majin-gru-up {
+    width: 72px;
+    height: 64px;
+    zoom: 300%;
+    background: url('/Users/melaniekalfus/desktop/proj1/char_5.png') left center;
+    animation: moveSpriteUp 1s steps(3) infinite;
+    animation-fill-mode: backwards;
+    transform: rotate(90deg) scaleX(-1);
+}
+
+.majin-gru-down {
+    width: 72px;
+    height: 64px;
+    zoom: 300%;
+    background: url('pics/sprites/Char_5.png') left center;
+    animation: moveSpriteDown 1s steps(3) infinite;
+    animation-fill-mode: backwards;
+    transform: rotate(-90deg) scaleX(-1);
+} */
+
+
+
+.frizu-standing {
+    display: flex;
+    width: 72px;
+    height: 64px;
+    zoom: 300%;
+    transform: scaleX(-1);
+    background: url('pics/sprites/Char_4.png') left center;
+    animation: moveSprite 2.25s steps(8) infinite;
+    animation-fill-mode: backwards;
+}
+    
+
+
+/* .frizu-up {
+    width: 72px;
+    height: 64px;
+    zoom: 300%;
+    background: url('pics/sprites/Char_4.png') left center;
+    animation: moveSpriteUp 1s steps(3) infinite;
+    animation-fill-mode: backwards;
+    transform: rotate(90deg) scaleX(-1);
+}
+        
+.frizu-down {
+    width: 72px;
+    height: 64px;
+    zoom: 300%;
+    transform: scaleX(-1);
+    background: url('pics/sprites/Char_4.png') left center;
+    animation: moveSpriteDown 1s steps(3) infinite;
+    animation-fill-mode: backwards;
+    transform: rotate(-90deg) scaleX(-1);
+} */
+
+
+
+/* 
+.blueAura {
+    display: flex;
+    align-self: flex-start;
+    width: 64px;
+    height: 64px;
+    zoom: 400%;
+    background: url('pics/sprites/Char_3.png') left center;
+    animation: powerUp .6s steps(4) infinite;
+}
+
+.yellowAura {
+    display: flex;
+    align-self: flex-start;
+    width: 64px;
+    height: 64px;
+    zoom: 400%;
+    background: url('pics/sprites/Char_4.png') left center;
+    animation: powerUp .6s steps(4) infinite;
+}
+
+.whiteAura {
+    display: flex;
+    align-self: flex-start;
+    width: 64px;
+    height: 64px;
+    zoom: 400%;
+    background: url('/Users/melaniekalfus/desktop/proj1/char_5.png') left center;
+    animation: powerUp .6s steps(4) infinite;
+} */
+
+
+
+@keyframes moveSprite{
+    from{
+        background-position-x:0px;
+        background-position-y:0px;
+    }
+    to{
+        background-position-x:-512px;
+        background-position-y:0px;
+    }
+}
+
+@keyframes moveSpriteUp{
+    from{
+        background-position-x:-64px;
+        background-position-y:-64px;
+    }
+    to{
+        background-position-x:-128px;
+        background-position-y:-64px;
+    }
+}
+
+@keyframes moveSpriteDown{
+    from{
+        background-position-x:-64px;
+        background-position-y:-64px;
+    }
+    to{
+        background-position-x:-128px;
+        background-position-y:-64px;
+    }
+}
+
+@keyframes powerUp{
+    from{
+        background-position-x:0px;
+        background-position-y:-384px;
+    }
+    to{
+        background-position-x:-256px;
+        background-position-y:-384px;
+    }
+}
