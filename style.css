@@ -8,7 +8,7 @@ body {
     height: 100%;
     width: 100%;
     display: flex;
-    background-image: url("pics/background/dbz background.png");
+    /* background-image: url("pics/background/dbz background.png"); */
     background-size: 100%;
     background-repeat: no-repeat;
     z-index: -1;
@@ -22,6 +22,12 @@ body {
     justify-content: space-between;
 }
 
+.health-bar {
+    display: flex;
+    position: absolute;
+    justify-content: 
+    zoom: 300%;
+}
 
 .gotu-standing {
     display: flex;
@@ -179,7 +185,8 @@ body {
     animation: powerUp .6s steps(4) infinite;
 } */
 
-
+/* keyframes animation found at
+https://itnext.io/creating-css-animations-using-sprite-sheet-47e2b7a3793c*/
 
 @keyframes moveSprite{
     from{

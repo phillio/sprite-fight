@@ -2,7 +2,7 @@
 
 // function startMusic() {
 //     // change 1st line "audio" to "iframe" for autoplay on load
-//     this.startMusic = document.createElement("audio");
+//     this.startMusic = document.createElement("iframe");
 //     this.startMusic.src = "sounds/soundtracks/fight-music.wav";
 //     this.startMusic.setAttribute("preload", "auto");
 //     this.startMusic.setAttribute("autoplay", "autoplay");
@@ -22,6 +22,7 @@
 
 
 
+//https://stackoverflow.com/questions/48545764/moving-div-using-javascript
 
 document.onkeydown = function(e) {
     const UpBtn = 87;
@@ -40,9 +41,9 @@ document.onkeydown = function(e) {
         e.preventDefault();
         gotuUp = parseInt(gotu.style.top || 227);
         gotu.style.top = (gotuUp - 15) + 'px';
-          if (parseInt(gotu.style.top) <= 20) {
+          if (parseInt(gotu.style.top) <= 10) {
             gotu.style.top = (gotuUp) + 'px';
-            console.log(STOP)
+            console.log('STOP')
         }
     } else if (e.keyCode === space) {
         const kamehameha = document.createElement('div')
@@ -72,6 +73,43 @@ document.onkeydown = function(e) {
         }, 501)
     }
   }
+  
+//   let health = document.getElementById("health")
+//   health.value -= 10;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -128,6 +166,7 @@ document.onkeydown = function(e) {
 
 
 //attempt 3
+//https://stackoverflow.com/questions/23585320/how-to-move-object-with-keyboard-in-javascript
 
 // const gotu = document.querySelector('.gotu-standing')
 // const gotuGPS = parseInt(gotu.style.top)
