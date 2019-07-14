@@ -20,7 +20,34 @@ body {
     justify-content: space-between;
 }
 
-#health {
+#p1health {
+    display: flex;
+    position: absolute;
+    justify-content: flex-start;
+    align-self: flex-start;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 2px; 
+    width: 20%;
+    height: 22px;
+    margin-left: -100%;
+}
+
+#p1health::-webkit-progress-bar {
+ background-color: yellow;
+  border-radius: 2px;
+}
+#p1health::-webkit-progress-value {
+   border-radius: 2px; 
+}
+
+
+
+
+
+
+
+#p2health {
     display: flex;
     position: absolute;
     justify-content: flex-end;
@@ -33,11 +60,11 @@ body {
     margin-left: -20%;
 }
 
-#health::-webkit-progress-bar {
+#p2health::-webkit-progress-bar {
  background-color: yellow;
   border-radius: 2px;
 }
-#health::-webkit-progress-value {
+#p2health::-webkit-progress-value {
    border-radius: 2px; 
 }
 
@@ -136,6 +163,8 @@ body {
     display: flex;
     width: 72px;
     height: 64px;
+    position: relative;
+    top: 227;
     zoom: 300%;
     transform: scaleX(-1);
     background: url('pics/sprites/Char_4.png') left center;
@@ -143,7 +172,32 @@ body {
     animation: moveSprite 2.25s steps(8) infinite;
     animation-fill-mode: backwards;
 }
-    
+
+.kamehameha2 {
+    display: flex;
+    width: 72px;
+    height: 64px;
+    zoom: 200%;
+    transform: scaleX(-1);
+    position: absolute;
+    background: url('pics/auras/FK.png') left center;
+    /* background-color: red; */
+    z-index: 1;
+    animation: kamehameha2Shoot .5s linear 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes kamehameha2Shoot{
+    0% {
+        left: 80%;
+    }
+    50% {
+        left: 40%;
+    }
+    100% {
+        left: 0%;
+    }
+}
 
 
 /* .frizu-up {
