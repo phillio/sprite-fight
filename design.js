@@ -36,7 +36,7 @@ document.onkeydown = function(e) {
   
     if (e.keyCode === p1Down) {
         e.preventDefault();
-        if (parseInt(gotu.style.top) <= 210) {
+        if (parseInt(gotu.style.top) <= 215) {
             gotuDown = parseInt(gotu.style.top);
             gotu.style.top = (gotuDown + 15) + 'px';
         }
@@ -48,6 +48,10 @@ document.onkeydown = function(e) {
             gotu.style.top = (gotuUp) + 'px';
             console.log('STOP')
         }
+        djafoisdjfsifjosafjsdijsiod
+        fdisafjoasjfoisdjfdsiaof
+        fdsajiofjsdioafj
+        
     } else if (e.keyCode === p1Fire) {
         const kamehameha = document.createElement('div')
         kamehameha.className = "kamehameha"
@@ -63,17 +67,19 @@ document.onkeydown = function(e) {
             const kamehamehaDiv = kamehameha.getBoundingClientRect();
             const frizu = document.querySelector(".frizu-standing");
             const frizuDiv = frizu.getBoundingClientRect();
-            const kameAdjTop = ((kamehamehaDiv.top-22))/1.5;
-            const kameAdjBot = ((kamehamehaDiv.bottom-22))/1.5;
+            const kameAdjTop = ((kamehamehaDiv.top-22))/1.5+24;
+            const kameAdjBot = kameAdjTop + 12;
             if (kameAdjBot > frizuDiv.top && kameAdjTop < frizuDiv.top) {
                 console.log('HIT - DEDUCT HP')
                 //https://stackoverflow.com/questions/20277052/how-to-make-a-health-bar
-                let healthPoints = document.querySelector("#p2health")
-                healthPoints.value -= 5;
-            } else if (frizuDiv.bottom > kamehamehaDiv.top && frizuDiv.top < kamehamehaDiv.top) {
+                let healthPoints2 = document.querySelector("#p2health")
+                healthPoints2.value -= 5;
+                checkHealthP2();
+            } else if (frizuDiv.bottom > kameAdjTop && frizuDiv.top < kameAdjTop) {
                 console.log('HIT - DEDUCT HP')
-                let healthPoints = document.querySelector("#p2health")
-                healthPoints.value -= 5;
+                let healthPoints2 = document.querySelector("#p2health")
+                healthPoints2.value -= 5;
+                checkHealthP2();
             } else {
                 console.log('MISS - LOL GET BETTER')
             }
@@ -84,7 +90,7 @@ document.onkeydown = function(e) {
         }, 501);
     }  else if (e.keyCode === p2Down) {
         e.preventDefault();
-        if (parseInt(frizu.style.top) <= 210) {
+        if (parseInt(frizu.style.top) <= 215) {
             frizuDown = parseInt(frizu.style.top);
             frizu.style.top = (frizuDown + 15) + 'px';
         }
@@ -111,21 +117,22 @@ document.onkeydown = function(e) {
             const kamehameha2Div = kamehameha2.getBoundingClientRect();
             const gotu = document.querySelector(".gotu-standing");
             const gotuDiv = gotu.getBoundingClientRect();
-            const kameAdjTop2 = ((kamehameha2Div.top)-22)/1.5;
-            const kameAdjBot2 = ((kamehameha2Div.bottom)-22)/1.5;
+            const kameAdjTop2 = ((kamehameha2Div.top)-22)/1.5+24;
+            const kameAdjBot2 = kameAdjTop2+12;
             if (kameAdjBot2 > gotuDiv.top && kameAdjTop2 < gotuDiv.top) {
                 console.log('HIT - DEDUCT HP')
                 //https://stackoverflow.com/questions/20277052/how-to-make-a-health-bar
-                let healthPoints2 = document.querySelector("#p1health")
-                healthPoints2.value -= 5;
-            } else if (gotuDiv.bottom > kamehameha2Div.top && gotuDiv.top < kamehameha2Div.top) {
+                let healthPoints = document.querySelector("#p1health")
+                    healthPoints.value -= 5;
+                    checkHealthP1();
+            } else if (gotuDiv.bottom > kameAdjTop2 && gotuDiv.top < kameAdjTop2) {
                 console.log('HIT - DEDUCT HP')
-                let healthPoints2 = document.querySelector("#p1health")
-                healthPoints2.value -= 5;
+                let healthPoints = document.querySelector("#p1health")
+                healthPoints.value -= 5;
+                checkHealthP1();
             } else {
                 console.log('MISS - LOL GET BETTER')
             }
-                
         }, 500);
         setTimeout(function() {
             kamehameha2.parentNode.removeChild(kamehameha2)
@@ -135,6 +142,29 @@ document.onkeydown = function(e) {
   
   
 
+  const checkHealthP1 = function() {
+    const healthPoints1 = document.querySelector("#p1health");
+    const projectiles = document.querySelector('.projectiles');
+    if (healthPoints1.value === 0) {
+        projectiles.parentNode.removeChild(projectiles)
+        return alert('PLAYER 2 WINS')
+    } else {
+        console.log('KEEP SHOOTING')
+    }
+}
+checkHealthP1();
+
+const checkHealthP2 = function() {
+    const healthPoints2 = document.querySelector("#p2health");
+    const projectiles = document.querySelector('.projectiles');
+    if (healthPoints2.value === 0) {
+        projectiles.parentNode.removeChild(projectiles)
+        return alert('PLAYER 1 WINS')
+    } else {
+        console.log('KEEP SHOOTING')
+    }
+}
+checkHealthP2();
 
 
 
@@ -142,7 +172,64 @@ document.onkeydown = function(e) {
 
 
 
+// let checkHealthP1 = function() {
+//     let healthPoints1 = document.querySelector("#p1health");
+//     let kameNum = document.querySelectorAll('.kamehameha');
+//     let kameNum2 = document.querySelectorAll('.kamehameha2');
+//     console.log(kameNum.length, kameNum2.length);
+//     if (healthPoints1.value === 0) {
+//         for (let i=0; i<kameNum.length; i++) {
+//             kameNum[i].parentNode.removeChild(i)
+//         }
+//         // for (let k=0; k<kameNum2.length; k++) {
+//         //     kameNum2[k].parentNode.removeChild(k)
+//         // }
+//         return alert('PLAYER 2 WINS')
+//     } else {
+//         console.log('KEEP SHOOTING')
+//     }
+// }
+// checkHealthP1();
 
+// let checkHealthP2 = function() {
+//     let healthPoints2 = document.querySelector("#p2health");
+//     let kameNum = document.querySelectorAll('.kamehameha');
+//     let kameNum2 = document.querySelectorAll('.kamehameha2');
+//     console.log(kameNum.length);
+//     if (healthPoints2.value === 0) {
+//         // for (let i=0; i<kameNum.length; i++) {
+//         //     kameNum[i].parentNode.removeChild(i)
+//         // }
+//         for (let k=0; k<kameNum2.length; k++) {
+//             kameNum2[k].parentNode.removeChild(k)
+//         }
+//         return alert('PLAYER 1 WINS')
+//     } else {
+//         console.log('KEEP SHOOTING')
+//     }
+// }
+// checkHealthP2();
+
+
+
+
+
+
+// let checkHealthP1 = function () {
+//     let p1Health = document.querySelector('#p1health')
+//     let p2Health = document.querySelector('#p2health')
+//     // if (p1Health.value <= 40) {
+//         // p1Health["-webkit-progress-bar"].bind(  ).background = 'red';
+//         // p1Health.-webkit-progress-bar.bind(p1Health) = 'red';
+//         //}
+//     if (p1Health.value === 0) {
+//         alert('PLAYER 1 WINS!')
+//     } else if (p2Health.value === 0) {
+//         alert('PLAYER 2 WINS!')
+//     }
+// }
+
+// checkHealthP1()
 
 
 

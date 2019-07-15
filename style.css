@@ -12,6 +12,20 @@ body {
     z-index: -1;
     position: relative;
 }
+/* 
+#p1-info {
+    display: flex;
+    position: absolute;
+    align-self: flex-start;
+    margin-left: -100%;
+}
+
+#p2-info {
+    display: flex;
+    position: absolute;
+    align-self: flex-end;
+    margin-left: -20%;
+} */
 
 .sprites {
     display: flex;
@@ -28,8 +42,8 @@ body {
     -webkit-appearance: none;
     appearance: none;
     border-radius: 2px; 
-    width: 20%;
-    height: 22px;
+    width: 30%;
+    height: 32px;
     margin-left: -100%;
 }
 
@@ -40,13 +54,7 @@ body {
 #p1health::-webkit-progress-value {
    border-radius: 2px; 
 }
-
-
-
-
-
-
-
+    
 #p2health {
     display: flex;
     position: absolute;
@@ -55,9 +63,9 @@ body {
     -webkit-appearance: none;
     appearance: none;
     border-radius: 2px; 
-    width: 20%;
-    height: 22px;
-    margin-left: -20%;
+    width: 30%;
+    height: 32px;
+    margin-left: -30%;
 }
 
 #p2health::-webkit-progress-bar {
