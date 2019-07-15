@@ -48,9 +48,6 @@ document.onkeydown = function(e) {
             gotu.style.top = (gotuUp) + 'px';
             console.log('STOP')
         }
-        djafoisdjfsifjosafjsdijsiod
-        fdisafjoasjfoisdjfdsiaof
-        fdsajiofjsdioafj
         
     } else if (e.keyCode === p1Fire) {
         const kamehameha = document.createElement('div')
