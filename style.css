@@ -11,7 +11,80 @@ body {
     background-repeat: no-repeat;
     z-index: -1;
     position: relative;
+    justify-content: center;
 }
+
+.main {
+    height: 100%;
+    width: auto;
+    display: flex;
+    background-image: url("pics/background/dbz background.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    justify-content: center;
+    
+}
+
+.menu {
+    display: flex;
+    flex-flow: column;
+    height: 40%;
+    width: 20%;
+    position: absolute;
+    justify-content: center;
+    align-self: center;
+    z-index: 1000;
+    text-align: center;
+    margin-top: 40px;
+}
+
+h1 {
+    height: 30%;
+    width: 40%;
+    top: 2%;
+    display: flex;
+    background-image: url('pics/background/Sprite Fight.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    /* z-index: 1; */
+    justify-content: center;
+}
+
+h2 {
+    height: 30%;
+    width: 40%;
+    top: 15%;
+    display: flex;
+    background-image: url('pics/background/Reloaded.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 1;
+    justify-content: center;
+}
+
+
+.button {
+	background-color:#b8e356;
+	border-radius:6px;
+	border:1px solid #83c41a;
+	color:#ffffff;
+	font-family:Arial;
+    font-size:30px;
+    width: 50%;
+    margin:10 auto;
+	font-weight:bold;
+	padding:6px 20px;
+    text-decoration:none;
+}
+
+button {
+    cursor: pointer;
+}
+
+
 /* 
 #p1-info {
     display: flex;
@@ -81,10 +154,9 @@ body {
     width: 72px;
     height: 64px;
     position: relative;
-    top: 227;
+    top: 250;
     zoom: 300%;
     background: url('pics/sprites/Char_3.png') left center;
-    /* background-color: black; */
     animation: moveSprite 2.25s steps(8) infinite;
     animation-fill-mode: backwards;
 }
@@ -116,7 +188,6 @@ body {
     zoom: 200%;
     position: absolute;
     background: url('pics/auras/GK.png') left center;
-    /* background-color: red; */
     z-index: 1;
     animation: kamehamehaShoot .5s linear 1;
     animation-fill-mode: forwards;
@@ -172,11 +243,10 @@ body {
     width: 72px;
     height: 64px;
     position: relative;
-    top: 227;
+    top: 250;
     zoom: 300%;
     transform: scaleX(-1);
     background: url('pics/sprites/Char_4.png') left center;
-    /* background-color: black; */
     animation: moveSprite 2.25s steps(8) infinite;
     animation-fill-mode: backwards;
 }
@@ -189,7 +259,6 @@ body {
     transform: scaleX(-1);
     position: absolute;
     background: url('pics/auras/FK.png') left center;
-    /* background-color: red; */
     z-index: 1;
     animation: kamehameha2Shoot .5s linear 1;
     animation-fill-mode: forwards;
