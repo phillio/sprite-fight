@@ -12,24 +12,22 @@ setTimeout(() => {
       
         if (e.keyCode === p1Down) {
             e.preventDefault();
-            gotuDown = parseInt(gotu.style.top || 180);
-            gotu.style.top = (gotuDown + 15) + 'px';
-            if (parseInt(gotu.style.top) <= 210) {
-                gotu.style.top = (gotuDown) + 'px';
+            if (parseInt(gotu.style.top) <= 215) {
+                gotuDown = parseInt(gotu.style.top);
+                gotu.style.top = (gotuDown + 15) + 'px';
             }
         } else if (e.keyCode === p1Up) {
             e.preventDefault();
-            gotuUp = parseInt(gotu.style.top || 180);
+            gotuUp = parseInt(gotu.style.top || 227);
             gotu.style.top = (gotuUp - 15) + 'px';
               if (parseInt(gotu.style.top) <= 10) {
                 gotu.style.top = (gotuUp) + 'px';
             }
-            
         } else if (e.keyCode === p1Fire) {
             const kamehameha = document.createElement('div')
             kamehameha.className = "kamehameha"
             document.body.appendChild(kamehameha);
-            kamehamehaGPST = parseInt(gotu.style.top || 180);
+            kamehamehaGPST = parseInt(gotu.style.top || 227);
             kamehameha.style.top = ((kamehamehaGPST*1.5)+22) + 'px';
             kamehameha.style.left = 128 + 'px';
             setTimeout(function() {
@@ -54,23 +52,23 @@ setTimeout(() => {
             }, 501);
         }  else if (e.keyCode === p2Down) {
             e.preventDefault();
-            frizuDown = parseInt(frizu.style.top || 180);
-            frizu.style.top = (frizuDown + 15) + 'px';
-            if (parseInt(frizu.style.top) <= 210) {
-                frizu.style.top = (frizuDown) + 'px';
+            if (parseInt(frizu.style.top) <= 215) {
+                frizuDown = parseInt(frizu.style.top);
+                frizu.style.top = (frizuDown + 15) + 'px';
             }
         } else if (e.keyCode === p2Up) {
             e.preventDefault();
-            frizuUp = parseInt(frizu.style.top || 180);
+            frizuUp = parseInt(frizu.style.top || 227);
             frizu.style.top = (frizuUp - 15) + 'px';
               if (parseInt(frizu.style.top) <= 10) {
                 frizu.style.top = (frizuUp) + 'px';
+                console.log('STOP')
             }
         } else if (e.keyCode === p2Fire) {
             const kamehameha2 = document.createElement('div')
             kamehameha2.className = "kamehameha2"
             document.body.appendChild(kamehameha2);
-            kamehamehaGPST2 = parseInt(frizu.style.top || 180);
+            kamehamehaGPST2 = parseInt(frizu.style.top || 227);
             kamehameha2.style.top = ((kamehamehaGPST2*1.5)+22) + 'px';
             kamehameha2.style.left = 128 + 'px';
             setTimeout(function() {
