@@ -9,7 +9,7 @@ The first player to force the other user to Zero HP wins!
 
 ![Sprite Fight Screenshot](https://raw.githubusercontent.com/phillio/sprite-fight/master/pics/Sprite%20Fight%20Screen%20Shot.png)
 
-#Instructions:
+## Instructions:
 
 **Player 1:**
 
