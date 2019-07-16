@@ -1,7 +1,3 @@
-
-body {
-}
-
 .gameboard {
     height: 100%;
     width: auto;
@@ -48,7 +44,6 @@ h1 {
     background-size: 100%;
     background-repeat: no-repeat;
     position: absolute;
-    /* z-index: 1; */
     justify-content: center;
 }
 
@@ -78,27 +73,8 @@ h2 {
 	font-weight:bold;
 	padding:6px 20px;
     text-decoration:none;
-}
-
-button {
     cursor: pointer;
 }
-
-
-/* 
-#p1-info {
-    display: flex;
-    position: absolute;
-    align-self: flex-start;
-    margin-left: -100%;
-}
-
-#p2-info {
-    display: flex;
-    position: absolute;
-    align-self: flex-end;
-    margin-left: -20%;
-} */
 
 .sprites {
     display: flex;
@@ -118,14 +94,15 @@ button {
     width: 30%;
     height: 32px;
     margin-left: -100%;
+    background-color: rgb(0, 255, 0);
 }
 
 #p1health::-webkit-progress-bar {
- background-color: yellow;
-  border-radius: 2px;
+    background-color: yellow;
+    border-radius: 2px;
 }
 #p1health::-webkit-progress-value {
-   border-radius: 2px; 
+    border-radius: 2px; 
 }
     
 #p2health {
@@ -142,11 +119,11 @@ button {
 }
 
 #p2health::-webkit-progress-bar {
- background-color: yellow;
-  border-radius: 2px;
+    background-color: yellow;
+    border-radius: 2px;
 }
 #p2health::-webkit-progress-value {
-   border-radius: 2px; 
+     border-radius: 2px; 
 }
 
 .gotu-standing {
@@ -154,44 +131,11 @@ button {
     width: 72px;
     height: 64px;
     position: relative;
-    top: 180;
+    top: 180px;
     zoom: 300%;
     background: url('pics/sprites/Char_3.png') left center;
-    animation: moveSprite 2.25s steps(8) infinite;
+    animation: animateSprite 2.25s steps(8) infinite;
     animation-fill-mode: backwards;
-}
-
-.gotu-aura {
-    display: flex;
-    width: 90px;
-    height: 110px;
-    position: absolute;
-    top: 250;
-    zoom: 200%;
-    background: url('pics/auras/GSS.png') left center;
-    animation: powerUp .5s steps(4) infinite;
-    animation-fill-mode: forwards;
-    z-index: -1;
-}
-
-.gotu-up {
-    width: 72px;
-    height: 64px;
-    zoom: 300%;
-    background: url('pics/sprites/Char_3.png') left center;
-    animation: moveSpriteUp .01s steps(1) 1;
-    animation-fill-mode: forwards;
-    transform: rotate(-90deg);
-}
-
-.gotu-down {
-    width: 72px;
-    height: 64px;
-    zoom: 300%;
-    background: url('pics/sprites/Char_3.png') left center;
-    animation: moveSpriteDown .01s steps(1) 1;
-    animation-fill-mode: forwards;
-    transform: rotate(90deg);
 }
 
 .kamehameha {
@@ -218,49 +162,16 @@ button {
     }
 }
 
-/* 
-.majin-gru-standing {
-    width: 72px;
-    height: 64px;
-    zoom: 300%;
-    background: url('/Users/melaniekalfus/desktop/proj1/char_5.png') left center;
-    animation: moveSprite 2.25s steps(8) infinite;
-    animation-fill-mode: backwards;
-    transform: scaleX(-1);
-}
-
-.majin-gru-up {
-    width: 72px;
-    height: 64px;
-    zoom: 300%;
-    background: url('/Users/melaniekalfus/desktop/proj1/char_5.png') left center;
-    animation: moveSpriteUp 1s steps(3) infinite;
-    animation-fill-mode: backwards;
-    transform: rotate(90deg) scaleX(-1);
-}
-
-.majin-gru-down {
-    width: 72px;
-    height: 64px;
-    zoom: 300%;
-    background: url('pics/sprites/Char_5.png') left center;
-    animation: moveSpriteDown 1s steps(3) infinite;
-    animation-fill-mode: backwards;
-    transform: rotate(-90deg) scaleX(-1);
-} */
-
-
-
 .frizu-standing {
     display: flex;
     width: 72px;
     height: 64px;
     position: relative;
-    top: 180;
+    top: 180px;
     zoom: 300%;
     transform: scaleX(-1);
     background: url('pics/sprites/Char_4.png') left center;
-    animation: moveSprite 2.25s steps(8) infinite;
+    animation: animateSprite 2.25s steps(8) infinite;
     animation-fill-mode: backwards;
 }
 
@@ -289,65 +200,7 @@ button {
     }
 }
 
-
-/* .frizu-up {
-    width: 72px;
-    height: 64px;
-    zoom: 300%;
-    background: url('pics/sprites/Char_4.png') left center;
-    animation: moveSpriteUp 1s steps(3) infinite;
-    animation-fill-mode: backwards;
-    transform: rotate(90deg) scaleX(-1);
-}
-        
-.frizu-down {
-    width: 72px;
-    height: 64px;
-    zoom: 300%;
-    transform: scaleX(-1);
-    background: url('pics/sprites/Char_4.png') left center;
-    animation: moveSpriteDown 1s steps(3) infinite;
-    animation-fill-mode: backwards;
-    transform: rotate(-90deg) scaleX(-1);
-} */
-
-
-
-/* 
-.blueAura {
-    display: flex;
-    align-self: flex-start;
-    width: 64px;
-    height: 64px;
-    zoom: 400%;
-    background: url('pics/sprites/Char_3.png') left center;
-    animation: powerUp .6s steps(4) infinite;
-}
-
-.yellowAura {
-    display: flex;
-    align-self: flex-start;
-    width: 64px;
-    height: 64px;
-    zoom: 400%;
-    background: url('pics/sprites/Char_4.png') left center;
-    animation: powerUp .6s steps(4) infinite;
-}
-
-.whiteAura {
-    display: flex;
-    align-self: flex-start;
-    width: 64px;
-    height: 64px;
-    zoom: 400%;
-    background: url('/Users/melaniekalfus/desktop/proj1/char_5.png') left center;
-    animation: powerUp .6s steps(4) infinite;
-} */
-
-/* keyframes animation found at
-https://itnext.io/creating-css-animations-using-sprite-sheet-47e2b7a3793c*/
-
-@keyframes moveSprite{
+@keyframes animateSprite{
     from{
         background-position-x:0px;
         background-position-y:0px;
@@ -380,13 +233,37 @@ https://itnext.io/creating-css-animations-using-sprite-sheet-47e2b7a3793c*/
     }
 }
 
-@keyframes powerUp{
-    from{
-        background-position-x:0px;
-        background-position-y:0px;
-    }
-    to{
-        background-position-x:-360px;
-        background-position-y:0px;
-    }
+.tutorial-modal {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+}
+.tutorial-content {
+    position: absolute;
+    background-image: url('pics/background/king\ kai\ planet.png');
+    background-size: 100vh;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vh;
+    top: -77%;
+    left: -88%;
+    border-radius: 6px;
+}
+.close-button {
+    float: right;
+    width: 50px;
+    line-height: 50px;
+    cursor: pointer;
+    border-radius: 6px;
+    background-color: orange;
+}
+.close-button:hover {
+    background-color: orangered;
+}
+
+.show-modal {
+    opacity: 1;
+    visibility: visible;
 }
