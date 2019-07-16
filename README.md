@@ -19,7 +19,7 @@ Move down: S
 
 Fire: C
 
-
+ 
 
 **Player 2:**
 
