@@ -5,7 +5,6 @@
     background-image: url("pics/background/dbz background.png");
     background-size: 100%;
     background-repeat: no-repeat;
-    z-index: -1;
     position: relative;
     justify-content: center;
 }
@@ -30,7 +29,6 @@
     position: absolute;
     justify-content: center;
     align-self: center;
-    z-index: 1000;
     text-align: center;
     margin-top: 40px;
 }
@@ -56,10 +54,8 @@ h2 {
     background-size: 100%;
     background-repeat: no-repeat;
     position: absolute;
-    z-index: 1;
     justify-content: center;
 }
-
 
 .button {
 	background-color:#b8e356;
@@ -266,4 +262,91 @@ h2 {
 .show-modal {
     opacity: 1;
     visibility: visible;
+}
+
+.gotu-modal {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+}
+.gotu-content {
+    position: absolute;
+    background-image: url('pics/background/p1 win.jpg');
+    background-size: 100vh;
+    zoom: 80%;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vh;
+    top: -77%;
+    left: -70%;
+    border-radius: 6px;
+}
+.close-button-gotu {
+    float: right;
+    width: 50px;
+    line-height: 50px;
+    cursor: pointer;
+    border-radius: 6px;
+    background-color: orange;
+}
+.close-button-gotu:hover {
+    background-color: orangered;
+}
+.frizu-modal {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+}
+.frizu-content {
+    position: absolute;
+    background-image: url('pics/background/p2 win.jpg');
+    background-size: 100vh;
+    zoom: 80%;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vh;
+    top: -77%;
+    left: -40%;
+    border-radius: 6px;
+}
+.close-button-frizu{
+    float: right;
+    width: 50px;
+    line-height: 50px;
+    cursor: pointer;
+    border-radius: 6px;
+    background-color: orange;
+}
+.close-button-frizu:hover {
+    background-color: orangered;
+}
+.start-modal {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.start-content {
+    position: absolute;
+    background-image: url('pics/background/get-ready.png');
+    background-size: 100vh;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vh;
+    left: -70%;
+    border-radius: 6px;
+}
+.close-button-start{
+    float: right;
+    width: 50px;
+    line-height: 50px;
+    cursor: pointer;
+    border-radius: 6px;
+    background-color: orange;
+}
+.close-button-start:hover {
+    background-color: orangered;
 }
