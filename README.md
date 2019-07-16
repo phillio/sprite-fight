@@ -7,6 +7,8 @@ Each player starts with 100 HealthPoints (represented by the green bar). Each pl
 
 The first player to force the other user to Zero HP wins!
 
+(P.S. Music will autoplay loudly; have fun!)
+
 ![Sprite Fight Screenshot](https://raw.githubusercontent.com/phillio/sprite-fight/master/pics/Sprite%20Fight%20Screen%20Shot.png)
 
 ## Instructions:
