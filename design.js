@@ -1,4 +1,10 @@
 setTimeout(() => {
+    const startModal = document.querySelector('.start-modal');
+    startModal.style.opacity = 0;
+    startModal.style.visibility = 'hidden';
+}, 3000)
+
+setTimeout(() => {
     makeBoard();
     document.onkeydown = function(e) {
         const p1Up = 87;
@@ -62,7 +68,6 @@ setTimeout(() => {
             frizu.style.top = (frizuUp - 15) + 'px';
               if (parseInt(frizu.style.top) <= 10) {
                 frizu.style.top = (frizuUp) + 'px';
-                console.log('STOP')
             }
         } else if (e.keyCode === p2Fire) {
             const kamehameha2 = document.createElement('div')
@@ -125,13 +130,36 @@ const makeHealthBars = function() {
     healthBarParent.appendChild(frizuHealth);
 }
 
+
+const p1winnerModal = document.querySelector(".gotu-modal");
+const closeButtonP1 = document.querySelector(".close-button-gotu");
+const findWinnerP1 = function() {
+    p1winnerModal.style.opacity = 1;
+    p1winnerModal.style.visibility = "visible";
+};
+
+const p2winnerModal = document.querySelector(".frizu-modal");
+const closeButtonP2 = document.querySelector(".close-button-frizu");
+const findWinnerP2 = function() {
+    p2winnerModal.style.opacity = 1;
+    p2winnerModal.style.visibility = "visible";
+};
+
+const redirect = function() {
+    function toggleRedirect() {
+        window.location.href="https://phillio.github.io/sprite-fight";
+    }
+    closeButtonP1.addEventListener("click", toggleRedirect);
+    closeButtonP2.addEventListener("click", toggleRedirect);
+}
+redirect();
+
 const checkHealthP1 = function() {
     const healthPoints1 = document.querySelector("#p1health");
     const projectiles = document.querySelector('.projectiles');
     if (healthPoints1.value === 0) {
-        projectiles.parentNode.removeChild(projectiles)
-        return alert('PLAYER 2 WINS')
-    } else {
+        projectiles.parentNode.removeChild(projectiles);
+        findWinnerP2();
     }
 }
 
@@ -139,29 +167,7 @@ const checkHealthP2 = function() {
     const healthPoints2 = document.querySelector("#p2health");
     const projectiles = document.querySelector('.projectiles');
     if (healthPoints2.value === 0) {
-        projectiles.parentNode.removeChild(projectiles)
-        return alert('PLAYER 1 WINS')
-    } else {
+        projectiles.parentNode.removeChild(projectiles);
+        findWinnerP1();
     }
 }
-
-const makeTutorial = function() {
-    const tutorialModal = document.querySelector(".tutorial-modal");
-    const tutorialButton = document.querySelector("#tutorial-button");
-    const closeButton = document.querySelector(".close-button");
-    
-    function toggleTutorial() {
-        tutorialModal.classList.toggle("show-modal");
-    }
-    
-    function clickTutorial(event) {
-        if (event.target === modal) {
-            toggleTutorial();
-        }
-    }
-    
-    tutorialButton.addEventListener("click", toggleTutorial);
-    closeButton.addEventListener("click", toggleTutorial);
-    window.addEventListener("click", clickTutorial);
-}
-makeTutorial();
