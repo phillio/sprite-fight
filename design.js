@@ -13,8 +13,9 @@ setTimeout(() => {
         if (e.keyCode === p1Down) {
             e.preventDefault();
             gotuDown = parseInt(gotu.style.top || 180);
+            gotu.style.top = (gotuDown + 15) + 'px';
             if (parseInt(gotu.style.top) <= 210) {
-                gotu.style.top = (gotuDown + 15) + 'px';
+                gotu.style.top = (gotuDown) + 'px';
             }
         } else if (e.keyCode === p1Up) {
             e.preventDefault();
@@ -54,8 +55,9 @@ setTimeout(() => {
         }  else if (e.keyCode === p2Down) {
             e.preventDefault();
             frizuDown = parseInt(frizu.style.top || 180);
+            frizu.style.top = (frizuDown + 15) + 'px';
             if (parseInt(frizu.style.top) <= 210) {
-                frizu.style.top = (frizuDown + 15) + 'px';
+                frizu.style.top = (frizuDown) + 'px';
             }
         } else if (e.keyCode === p2Up) {
             e.preventDefault();
