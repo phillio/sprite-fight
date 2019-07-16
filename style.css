@@ -131,7 +131,7 @@ h2 {
     width: 72px;
     height: 64px;
     position: relative;
-    top: 180px;
+    top: 227;
     zoom: 300%;
     background: url('pics/sprites/Char_3.png') left center;
     animation: animateSprite 2.25s steps(8) infinite;
@@ -167,7 +167,7 @@ h2 {
     width: 72px;
     height: 64px;
     position: relative;
-    top: 180px;
+    top: 227;
     zoom: 300%;
     transform: scaleX(-1);
     background: url('pics/sprites/Char_4.png') left center;
