@@ -7,39 +7,20 @@
     <link rel='stylesheet' type='text/css' href='./style.css'>
 </head>
 <body>
-    <div class="gameboard">
-        <!-- <p id="p1-info"><br>p1<br>W = up<br>S = down<br>C = fire</p>
-        <p id="p2-info"><br>p2<br>P = up<br>L = down<br>M = fire</p> -->
-        <div class="sprites">
-            <div class="gotu">
-                <div class="gotu-standing"></div>
-                <!-- <div class="gotu-up"></div>
-                <div class="gotu-down"></div> -->
+    <div class="main">
+        <h1></h1>
+        <h2></h2>
+        <div class="menu">
+            <a class="button" href="game.html">PLAY</a>  
+            <a class="button" id ="tutorial-button" >TUTORIAL</a>
+            <div class="tutorial-modal">
+                    <div class="tutorial-content">
+                        <span class="close-button">&times;</span>
+                    </div>
             </div>
-            <div class="majin-gru">
-                <div class="majin-gru-standing"></div>
-                <!-- <div class="majin-gru-up"></div>
-                <div class="majin-gru-down"></div> -->
-            </div>
-            <div class="frizu">
-                <div class="frizu-standing"></div>
-                <!-- <div class="frizu-up"></div>
-                <div class="frizu-down"></div> -->
-            </div>
-        </div>
-        <div class="energy">
-            <!-- <div class="blueAura"></div>
-            <div class="yellowAura"></div> -->
-        </div>
-        <div class="health-bar">
-            <progress id="p1health" value="100" max="100"></progress>
-            <progress id="p2health" value="100" max="100"></progress>
-        </div>
-        <div class="projectiles">
         </div>
     </div>
-    <!-- audio code borrowed from Andre-->
-    <!-- <audio autoplay controls loop> <source src="./sounds/soundtracks/fight-music.wav" type="audio/mp3"></audio> -->
+    <audio autoplay loop><source src="./sounds/soundtracks/menu-music.wav" type="audio/mp3"></audio>
     <script src="design.js"></script>
 </body>
 </html>

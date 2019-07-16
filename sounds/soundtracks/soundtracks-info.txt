@@ -1,1 +1,4 @@
 https://tallbeard.itch.io/music-loop-bundle
+
+fight-music.wav is Ludum Dare 38 - Track 9
+menu-music.wav is Ludum Dare 30 - Track 4
