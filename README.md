@@ -1,4 +1,4 @@
-# Sprite Fight!
+# Sprite Fight! (Google Chrome, please)
 Sprite fight is a DragonBallZ inspired game, with 2 opposing players (user controlled) on opposite sides of the screen.
 
 Players are limited to moving up and down, and can fire projectiles (Kamehamehas) at one another.
